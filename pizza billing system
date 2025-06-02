@@ -1,0 +1,71 @@
+# Pizza Billing System - Java OOP Project
+
+This is a simple Java console application that demonstrates **Object-Oriented Programming (OOP)** concepts such as inheritance, encapsulation, and method overriding. The project simulates a pizza ordering system with customizable options like extra cheese, extra toppings, and takeaway packaging.
+
+---
+
+## Features
+
+- Create vegetarian or non-vegetarian pizzas
+- Add extra cheese and toppings (optional)
+- Opt for takeaway packaging
+- Automatically calculate and display the final bill
+- Deluxe pizza subclass with fixed extra cheese and toppings (no extra additions allowed)
+
+---
+
+## Project Structure
+
+- **Main.java** — The entry point with sample pizza orders and billing
+- **Pizza.java** — Base class representing a pizza with customizable options
+- **DeluxPizza.java** — Subclass of Pizza with predefined extras (extra cheese & toppings)
+
+---
+
+## Code Overview
+
+### Pizza Class
+- Fields: price, veg (vegetarian flag), extra prices, flags for extra additions
+- Methods:
+  - `addExtraCheese()` — Adds cheese and updates price
+  - `addExtraToppings()` — Adds toppings and updates price
+  - `takeAway()` — Adds takeaway packaging cost
+  - `getBill()` — Prints detailed bill including extras and total price
+- Constructor sets base price based on veg/non-veg choice
+
+### DeluxPizza Class
+- Inherits from `Pizza`
+- Automatically adds extra cheese and toppings in constructor
+- Overrides `addExtraCheese()` and `addExtraToppings()` methods to prevent further additions
+
+---
+
+## Sample Output
+
+```
+Extra cheese added
+Extra toppings added
+Take away opted
+Pizza: 400
+Extra Cheese Added: 100
+Extra Toppings Added: 150
+Extra Take Away Added: 20
+Bill: 670
+
+Take away opted
+Pizza: 300
+Extra Cheese Added: 100
+Extra Toppings Added: 150
+Extra Take Away Added: 20
+Bill: 570
+```
+
+---
+
+## License
+
+This project is open-source and free to use.
+
+---
+
+Feel free to contribute or suggest improvements!
